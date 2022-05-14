@@ -1,5 +1,27 @@
 # Vegetable-Fruit-Stat-jp
 
+**😀 You can try here(https://aiutarsi.github.io/Vegetable-Fruit-Stat-jp/)!**
+
+## Frontend
+- HTML5
+- CSS3
+- JavaScript
+- D3.js
+
+## Data Scraping & Processing
+- Python
+
+# Tasks
+
+- [x] Deployment
+- [ ] グラフ題目
+- [ ] グラフ凡例
+- [ ] グラフ書き出しボタン
+- [ ] tooltipの配置
+- [ ] x軸のメモリ数
+- [ ] 画面サイズ変更におけるsvgのサイズ可変, ボタンのサイズ可変, スマホ表示(jsファイルでサイズ変更の検知とcss編集)
+- [ ] スライダー形式での時間軸変更
+
 # License
 
 - D3.js

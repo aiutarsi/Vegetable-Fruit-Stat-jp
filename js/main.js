@@ -14,6 +14,13 @@ const endMonthInput = document.querySelector("#end-month");
 const endDayInput = document.querySelector("#end-day");
 const error_msg = document.querySelector("#date-error");
 
+/* ウィンドウサイズ */
+const middle = document.querySelector(".middle");
+domPositions();
+window.addEventListener('DOMContentLoaded', function() {
+  window.addEventListener('resize', function() { domPositions(); });
+});
+
 /* 折れ線グラフ部分 */
 const cities_code_list = ["0401","1301","1401","1701","2301","2601","2701","2801","3401","3701","4001","4002","4701","5101"];
 const cities_code_dic = {'0401':"仙台", '1301':"東京", '1401':"横浜", '1701':"金沢", '2301':"名古屋", '2601':"京都", '2701':"大阪", '2801':"神戸", '3401':"広島", '3701':"高松", '4001':"北九州", '4002': "福岡", '4701':"沖縄", '5101':"札幌"};
@@ -110,6 +117,15 @@ d3.select("#okinawa").on("click", function(){drawGraphOneCity("4701")});
 d3.select("#allon").on("click", function(){drawGraphOneCity("allon")});
 d3.select("#alloff").on("click", function(){drawGraphOneCity("alloff")});
 
+
+function domPositions() {
+  if (window.innerWidth < 1400) {
+    middle.style.display = "block";
+  }
+  else {
+    middle.style.display = "flex";
+  }
+}
 
 function judgeAndWriteMessage() {
   const msgStart = dateCheck(startYearInput.value, startMonthInput.value, startDayInput.value);
