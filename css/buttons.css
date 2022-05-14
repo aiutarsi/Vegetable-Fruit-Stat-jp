@@ -1,0 +1,237 @@
+/* 日本地図 */
+#japanmap {
+  position :relative;
+  top: 0;
+  left: 0;
+}
+#japanmapimage {
+  width: 500px;
+  height: 500px;
+  background: url('../images/japan.png');
+  background-size: cover;
+  float: left;
+}
+
+/* ボタン */
+#buttons {
+  position: relative;
+  top: 0;
+  left: 0;
+  float: left;
+}
+
+#buttons > a {
+  position: absolute;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+  text-align: center;
+  padding:15px 0;
+  vertical-align: middle;
+  text-decoration: none;
+  font-size: larger;
+}
+#buttons > a:hover {
+  -webkit-transform: translate(0, 3px);
+  transform: translate(0, 3px);
+}
+
+#sapporo {
+  background-color:yellow; 
+  top: 95px;
+  left: 30px;
+  -webkit-box-shadow: 0 5px 0 #e6d900;
+  box-shadow: 0 5px 0 #e6d900;
+  color: black;
+}
+#sapporo:hover {
+  -webkit-box-shadow: 0 2px 0 #e6d900;
+  box-shadow: 0 2px 0 #e6d900;
+}
+#sendai {
+  background-color: aqua;
+  top: 140px;
+  left: 430px;
+  -webkit-box-shadow: 0 5px 0 rgb(1, 196, 196);
+  box-shadow: 0 5px 0 rgb(1, 196, 196);
+  color: black;
+}
+#sendai:hover {
+  -webkit-box-shadow: 0 2px 0 rgb(1, 196, 196);
+  box-shadow: 0 2px 0 rgb(1, 196, 196);
+}
+#tokyo {
+  background-color: blue;
+  top: 320px;
+  left: 400px;
+  -webkit-box-shadow: 0 5px 0 rgb(0, 0, 204);
+  box-shadow: 0 5px 0 rgb(0, 0, 204);
+  color: white;
+}
+#tokyo:hover {
+  -webkit-box-shadow: 0 2px 0 rgb(0, 0, 204);
+  box-shadow: 0 2px 0 rgb(0, 0, 204);
+}
+#yokohama {
+  background-color:fuchsia;
+  top: 370px;
+  left: 320px;
+  -webkit-box-shadow: 0 5px 0 rgb(187, 1, 187);
+  box-shadow: 0 5px 0 rgb(187, 1, 187);
+  color: white;
+}
+#yokohama:hover {
+  -webkit-box-shadow: 0 2px 0 rgb(187, 1, 187);
+  box-shadow: 0 2px 0 rgb(187, 1, 187);
+}
+#kanazawa {
+  background-color:gray;
+  top: 160px;
+  left: 305px;
+  -webkit-box-shadow: 0 5px 0 rgb(70, 70, 70);
+  box-shadow: 0 5px 0 rgb(70, 70, 70);
+  color: white;
+}
+#kanazawa:hover {
+  -webkit-box-shadow: 0 2px 0 rgb(70, 70, 70);
+  box-shadow: 0 2px 0 rgb(70, 70, 70);
+}
+#nagoya {
+  background-color:green;
+  top: 430px;
+  left: 280px;
+  -webkit-box-shadow: 0 5px 0 rgb(1, 68, 1);
+  box-shadow: 0 5px 0 rgb(1, 68, 1);
+  color: white;
+}
+#nagoya:hover {
+  -webkit-box-shadow: 0 2px 0 rgb(1, 68, 1);
+  box-shadow: 0 2px 0 rgb(1, 68, 1);
+}
+#kyoto {
+  background-color:lime;
+  top: 220px;
+  left: 210px;
+  -webkit-box-shadow: 0 5px 0 rgb(4, 167, 4);
+  box-shadow: 0 5px 0 rgb(4, 167, 4);
+  color:black;
+}
+#kyoto:hover {
+  -webkit-box-shadow: 0 2px 0 rgb(4, 167, 4);
+  box-shadow: 0 2px 0 rgb(4, 167, 4);
+}
+#osaka {
+  background-color:maroon;
+  top: 430px;
+  left: 210px;
+  -webkit-box-shadow: 0 5px 0 rgb(70, 1, 1);
+  box-shadow: 0 5px 0 rgb(70, 1, 1);
+  color:white;
+}
+#osaka:hover {
+  -webkit-box-shadow: 0 2px 0 rgb(70, 1, 1);
+  box-shadow: 0 2px 0 rgb(70, 1, 1);
+}
+#kobe {
+  background-color:navy;
+  top: 230px;
+  left: 140px;
+  -webkit-box-shadow: 0 5px 0 rgb(2, 2, 68);
+  box-shadow: 0 5px 0 rgb(2, 2, 68);
+  color:white;
+}
+#kobe:hover {
+  -webkit-box-shadow: 0 2px 0 rgb(2, 2, 68);
+  box-shadow: 0 2px 0 rgb(2, 2, 68);
+}
+#hiroshima {
+  background-color:olive;
+  top: 325px;
+  left: 100px;
+  -webkit-box-shadow: 0 5px 0 rgb(61, 61, 1);
+  box-shadow: 0 5px 0 rgb(61, 61, 1);
+  color:white;
+}
+#hiroshima:hover {
+  -webkit-box-shadow: 0 2px 0 rgb(61, 61, 1);
+  box-shadow: 0 2px 0 rgb(61, 61, 1);
+}
+#takamatsu {
+  background-color:purple;
+  top: 420px;
+  left: 145px;
+  -webkit-box-shadow: 0 5px 0 rgb(71, 2, 71);
+  box-shadow: 0 5px 0 rgb(71, 2, 71);
+  color:white;
+}
+#takamatsu:hover {
+  -webkit-box-shadow: 0 2px 0 rgb(71, 2, 71);
+  box-shadow: 0 2px 0 rgb(71, 2, 71);
+}
+#kitakyusyu {
+  background-color:red;
+  top: 430px;
+  left: 50px;
+  -webkit-box-shadow: 0 5px 0 rgb(134, 1, 1);
+  box-shadow: 0 5px 0 rgb(134, 1, 1);
+  color:white;
+}
+#kitakyusyu:hover {
+  -webkit-box-shadow: 0 2px 0 rgb(134, 1, 1);
+  box-shadow: 0 2px 0 rgb(134, 1, 1);
+}
+#fukuoka {
+  background-color: silver;
+  top: 280px;
+  left: 20px;
+  -webkit-box-shadow: 0 5px 0 rgb(104, 104, 104);
+  box-shadow: 0 5px 0 rgb(104, 104, 104);
+  color:black;
+}
+#fukuoka:hover {
+  -webkit-box-shadow: 0 2px 0 rgb(104, 104, 104);
+  box-shadow: 0 2px 0 rgb(104, 104, 104);
+}
+#okinawa {
+  background-color: teal;
+  top: 450px;
+  left: 400px;
+  -webkit-box-shadow: 0 5px 0 rgb(1, 88, 88);
+  box-shadow: 0 5px 0 rgb(1, 88, 88);
+  color:white;
+}
+#okinawa:hover {
+  -webkit-box-shadow: 0 2px 0 rgb(1, 88, 88);
+  box-shadow: 0 2px 0 rgb(1, 88, 88);
+}
+
+#allbuttons a {
+  background-color:orange;
+  position: absolute;
+  left: 210px;
+  border-radius: 0%;
+  width: 200px;
+  height: 50px;
+  -webkit-box-shadow: 0 5px 0 rgb(192, 126, 4);
+  box-shadow: 0 5px 0 rgb(192, 126, 4);
+  cursor: pointer;
+  text-align: center;
+  padding:3px 0;
+  vertical-align: middle;
+  text-decoration: none;
+  color:black;
+  font-size: xx-large;
+}
+#allbuttons a:hover {
+  -webkit-transform: translate(0, 3px);
+  transform: translate(0, 3px);
+  -webkit-box-shadow: 0 2px 0 rgb(192, 126, 4);
+  box-shadow: 0 2px 0 rgb(192, 126, 4);
+}
+#allon {
+  top: 20px;
+}
+#alloff {
+  top: 80px;
+}
