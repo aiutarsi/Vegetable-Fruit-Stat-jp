@@ -234,9 +234,8 @@ function set_scale() {
     start_day = end_day;
   }
   xScale = d3.scaleTime()
-    .domain([set_time(start_day), set_time(end_day)])
+    .domain([start_day, end_day])
     .range([margin.left, width - margin.right]);
-  
   //最小価格・最大価格を見つける
   let min_cost = 10000;
   let max_cost = -1;
@@ -260,20 +259,9 @@ function set_scale() {
     .range([height - margin.bottom, margin.top]);
 }
 
-function set_time(date) {
-  return date.setHours(date.getHours() - 9);
-}
-
-function tick_distance(start_day, end_day) {
-  let diff = end_day.getTime() - start_day.getTime();
-  diff /= (1000*60*60*24);
-  return Math.floor(diff/8);
-}
-
 function show_axis() {
   let axis_x = d3.axisBottom(xScale)
-    .ticks(8)
-    //.ticks(d3.timeDay.every(tick_distance(start_day,end_day))) //日本時間とグリニッジ時間を合わせる //d3.utcDay //自動的に目盛り数が8くらいになるように飛ばす間隔を調整
+    .ticks(5)
     .tickFormat(d3.timeFormat("%y/%m/%d"))
     .tickSize(-height + margin.bottom + margin.top);
   let axis_y = d3.axisLeft(yScale)
@@ -322,7 +310,7 @@ function line_plot() {
       .attr("stroke", cities_color_dic[city_code])
       .attr("stroke-width", 1.0)
       .attr("d", d3.line()
-          .x(function(d) { return xScale(set_time(new Date(d[0].slice(0,4), d[0].slice(4,6)-1, d[0].slice(6,8)))); }) //(new Date(d3.utcDay(new Date(tmp(d)))))
+          .x(function(d) { return xScale(new Date(d[0].slice(0,4), d[0].slice(4,6)-1, d[0].slice(6,8))); })
           .y(function(d) { return yScale(d[1]); }));
     let path_length = path.node().getTotalLength(); //パスの長さ
     path.attr("stroke-dasharray", path_length + " " + path_length)
@@ -332,11 +320,6 @@ function line_plot() {
       .attr("ease", "linear")
       .attr("stroke-dashoffset", 0);
   }
-}
-
-function tmp(d) {
-  console.log(new Date(d[0].slice(0,4), d[0].slice(4,6)-1, d[0].slice(6,8)));
-  return d[0];
 }
 
 function scatter_plot() {
@@ -354,7 +337,7 @@ function scatter_plot() {
       .data(selected_dataset)
       .enter()
       .append("circle")
-      .attr("cx", function(d) { return xScale(set_time(new Date(d[0].slice(0,4), d[0].slice(4,6)-1, d[0].slice(6,8)))); }) //(new Date(d[0]))
+      .attr("cx", function(d) { return xScale(new Date(d[0].slice(0,4), d[0].slice(4,6)-1, d[0].slice(6,8))); })
       .attr("cy", function(d) { return yScale(d[1]); })
       .attr("fill", cities_color_dic[city_code])
       .attr("r", 3)
