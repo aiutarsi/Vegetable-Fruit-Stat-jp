@@ -2,7 +2,7 @@
 
 **😀 You can try here(https://aiutarsi.github.io/Vegetable-Fruit-Stat-jp/)!**
 
-## Frontend
+## Front-end
 - HTML5
 - CSS3
 - JavaScript
