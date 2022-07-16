@@ -85,6 +85,45 @@ endYearInput.value = String((new Date()).getFullYear());
 endMonthInput.value = String((new Date()).getMonth()+1);
 endDayInput.value = String((new Date()).getDate());
 
+/* svg -> png保存 */
+const downloadGraph = document.querySelector("#download-graph");
+downloadGraph.addEventListener('click', function(event) {
+  const svgPrinted = document.querySelector("#chart");
+  if (svgPrinted !== null) { /* 存在する場合のみ */
+    const svgData = new XMLSerializer().serializeToString(svgPrinted); /* データ取り出し */
+
+    let canvas = document.createElement("canvas");
+    canvas.width = svgPrinted.width.baseVal.value;
+    canvas.height = svgPrinted.height.baseVal.value;
+
+    const ctx = canvas.getContext("2d");
+    let image = new Image();
+
+    let fileName = foodInput.value + "_" + startYearInput.value + "-" + fillZero(startMonthInput.value) + "-" + fillZero(startDayInput.value) + "_" + endYearInput.value + "-" + fillZero(endMonthInput.value) + "-" + fillZero(endDayInput.value) + ".png";
+
+    image.onload = function() {
+      ctx.drawImage(image,0,0,image.width,image.height);
+      let a = document.createElement("a");
+      a.href = canvas.toDataURL("a");
+      a.setAttribute("download", fileName);
+      a.dispatchEvent(new MouseEvent("click"));
+    }
+
+    image.src = "data:image/svg+xml;charset=utf-8;base64," + btoa(unescape(encodeURIComponent(svgData)));
+  }
+  else {
+    error_msg.textContent = "グラフを表示させてください。";
+  }
+});
+
+function fillZero (str) {
+  const num = Number(str);
+  if (num <= 9) {
+    return "0" + String(str);
+  }
+  return str;
+}
+
 d3.json(file_path).then(function(data) { 
   dataset = data;
 });
